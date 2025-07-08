@@ -1,0 +1,235 @@
+.courses-header {
+    background: linear-gradient(to right,#4b2909b3,#fcfcfc, #ffffff,#4b2909b3);
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    
+    top: 0;
+    z-index: 100;
+}
+
+/* Navigation Links */
+.courses-header a {
+    text-decoration: none;
+    color: #374151;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.courses-header a:hover {
+    background-color: #4b2909b3;
+    color: #ffffff;
+}
+
+.courses-header a.active {
+    color: #e63946;
+    background-color: #ffffff;
+    border: 1px solid #e63946;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+    padding: 10px 16px;
+    background: linear-gradient(180deg,  #ffffff,#4b2909b3,#ffffff);
+    border: 0px solid #ccc;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-button:hover {
+    background-color: #ff7c01b3;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    color:#4b2909b3;
+    background-color: white;
+    border: 1px solid #ddd;
+    min-width: 220px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 100;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
+    display: block;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+    display: block;
+    padding: 12px 18px;
+    color: #333;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #4b2909b3;
+}
+
+/* Dropdown animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .courses-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .dropdown-content {
+        min-width: 100%;
+    }
+}
+
+/* Courses grid */
+.courses-container {
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+/* Course card */
+.course-card {
+    background-color: rgba(75, 41, 9, 0.7);
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(99, 102, 241, 0.2);
+    background: linear-gradient(135deg, #15275f, #ffffff);
+}
+
+.course-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.course-card .description {
+    color: #c5a59b;
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+    line-height: 1.5;
+}
+
+.course-card .price {
+    font-weight: 700;
+    color: #e5ff9e;
+    margin-bottom: 14px;
+    font-size: 1rem;
+}
+
+/* Buy now button */
+.course-card .buy-now {
+    background: linear-gradient(to right, #3b82f6, #2563eb);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.course-card .buy-now:hover {
+    background: linear-gradient(to right, #1e40af, #1d4ed8);
+}
+
+/* Empty state */
+.no-courses {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #6b7280;
+    padding: 60px 0;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Tweaks */
+@media (max-width: 640px) {
+    .courses-nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .dropdown-content {
+        min-width: 100%;
+        left: 0;
+        right: 0;
+    }
+}
+.pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.pagination {
+    display: flex;
+    list-style: none;
+    gap: 5px;
+    padding: 0;
+}
+
+.pagination li a,
+.pagination li span {
+    display: block;
+    padding: 8px 12px;
+    background-color: #ffffff;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.pagination li span.active {
+    background-color: #333;
+    color: #fff;
+    cursor: default;
+}
+
+.pagination li span.disabled {
+    background-color: #eee;
+    color: #aaa;
+    cursor: not-allowed;
+}

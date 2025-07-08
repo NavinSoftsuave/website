@@ -1,0 +1,81 @@
+/* Wrapper for the entire course page */
+.course-show-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Course Title */
+.course-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #1f2937;
+    text-align: center;
+}
+
+/* Card Container */
+.course-card {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: rgba(75, 41, 9, 0.8); /* semi-transparent dark background */
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    color: #f9fafb;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+}
+
+/* Course Description */
+.course-description {
+    font-size: 1rem;
+    color: #e0d2c1;
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+}
+
+/* Course Price */
+.course-price {
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: #e5ff9e;
+    margin-bottom: 1.5rem;
+}
+
+/* Buy Now Button */
+.buy-button {
+    width: 100%;
+    padding: 0.75rem 1.25rem;
+    background: linear-gradient(to right, #3b82f6, #2563eb);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(59, 130, 246, 0.3);
+    transition: all 0.3s ease;
+}
+
+.buy-button:hover {
+    background: linear-gradient(to right, #1e40af, #1d4ed8);
+}
+
+.course-video-wrapper {
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.course-video {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}

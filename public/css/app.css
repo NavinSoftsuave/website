@@ -1,0 +1,42 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #4b2909;
+    background-image: url('/images/bg-pay2.jpg');
+    background-size: contain; /* or use 'auto' to preserve original size */
+    background-repeat: repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+
+.layout-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.layout-header {
+    background-color: #fff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 1rem 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.layout-header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.layout-main {
+    flex: 1;
+    padding: 1rem 0;
+}
+
+.layout-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
